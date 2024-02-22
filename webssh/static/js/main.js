@@ -608,9 +608,9 @@ jQuery(function($){
     function ajax_post() {
       status.text('');
       button.prop('disabled', true);
-
+      const url = window.location.href.split(/\?|#/, 1)[0];
       $.ajax({
-          url: "http://localhost:8888",
+          url: url,
           type: 'post',
           data: data1,
           complete: ajax_complete_callback,
